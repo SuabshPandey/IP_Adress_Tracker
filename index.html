@@ -6,8 +6,72 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>IP Address Tracker</title>
     <link rel="stylesheet" href="style.css" />
+
+    <!-- Leaflet CSS -->
+
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.8.0/dist/leaflet.css"
+      integrity="sha512-hoalWLoI8r4UszCkZ5kL8vayOGVae1oxXe/2A4AO6J9+580uKHDO3JdHb7NzwwzK5xr/Fs0W40kiNHxM9vyTtQ=="
+      crossorigin=""
+    />
+
+    <!-- Leaflet JS -->
+
+    <script
+      src="https://unpkg.com/leaflet@1.8.0/dist/leaflet.js"
+      integrity="sha512-BB3hKbKWOc9Ez/TAwyWxNXeoV9c1v6FIeYiBieIWkpLjauysF18NzgR1MBNBXf8/KABdlkX68nAhlwcDFLGPCQ=="
+      crossorigin=""
+    ></script>
+
+    <!-- Custom Style -->
+    <link rel="stylesheet" href="./styles.css" />
   </head>
   <body>
-    <h1>IP Address Tracker</h1>
+    <div class="ip_address_main_div">
+      <div class="ip_address_input_div">
+        <h1 class="title">IP Address Tracker</h1>
+        <div class="ip_address_input">
+          <input
+            type="text"
+            placeholder="Search for any IP address or domain"
+          />
+          <button>
+            <img src="./images/icon-arrow.svg" alt="arrow" />
+          </button>
+        </div>
+      </div>
+      <div class="ip_address_result_div">
+        <div class="result_div ip_address_div">
+          <h2>IP Address</h2>
+          <span id="ip_address">8.8.8.8</span>
+        </div>
+        <div class="result_div location_div">
+          <h2>Location</h2>
+          <span id="location">Kathmandu</span>
+        </div>
+        <div class="result_div timezone_div">
+          <h2>Timezone</h2>
+          <span id="timezone">12:00</span>
+        </div>
+        <div class="result_div isp_div">
+          <h2>ISP</h2>
+          <span id="isp">Google LIC</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="map_div" id="ipMap"></div>
+
+    <script>
+      const map = L.map("ipMap").setView([27.7172, 85.324], 13);
+
+      const attribution =
+        '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors';
+
+      const tileUrl = "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png";
+      const tiles = L.tileLayer(tileUrl, { attribution });
+      tiles.addTo(map);
+    </script>
   </body>
 </html>
