@@ -1,0 +1,62 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+#ipMap {
+  height: 480px;
+}
+
+.ip_address_main_div {
+  background: url("/images/pattern-bg.png");
+  padding: 25px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.map_div {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.ip_address_result_div {
+  width: 80%;
+  height: 130px;
+  border-radius: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+  align-items: center;
+  justify-content: space-around;
+  overflow: hidden;
+  background-color: aliceblue;
+}
+
+.result_div {
+  border-right: 2px solid rgb(202, 202, 202);
+  padding-right: 60px;
+  height: 60px;
+}
+.isp_div {
+  border-right: none;
+}
+
+.title {
+  color: #fff;
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.ip_address_input {
+  text-align: center;
+  padding: 20px;
+  /* min-height: 200px; */
+}
