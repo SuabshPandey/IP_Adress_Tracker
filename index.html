@@ -31,32 +31,39 @@
     <div class="ip_address_main_div">
       <div class="ip_address_input_div">
         <h1 class="title">IP Address Tracker</h1>
-        <div class="ip_address_input">
+        <form class="form_container">
           <input
+            id="ip_address"
             type="text"
+            class="form-control"
             placeholder="Search for any IP address or domain"
           />
-          <button>
-            <img src="./images/icon-arrow.svg" alt="arrow" />
+          <button id="search_btn" class="btn btn-dark">
+            <img
+              src="images/icon-arrow.svg"
+              width="12px"
+              height="12px"
+              alt="arrow_img"
+            />
           </button>
-        </div>
+        </form>
       </div>
       <div class="ip_address_result_div">
         <div class="result_div ip_address_div">
-          <h2>IP Address</h2>
-          <span id="ip_address">8.8.8.8</span>
+          <h2 class="result_title">IP Address</h2>
+          <span class="result_value" id="ip_address">8.8.8.8</span>
         </div>
         <div class="result_div location_div">
-          <h2>Location</h2>
-          <span id="location">Kathmandu</span>
+          <h2 class="result_title">Location</h2>
+          <span class="result_value" id="location">Kathmandu</span>
         </div>
         <div class="result_div timezone_div">
-          <h2>Timezone</h2>
-          <span id="timezone">12:00</span>
+          <h2 class="result_title">Timezone</h2>
+          <span class="result_value" id="timezone">12:00</span>
         </div>
         <div class="result_div isp_div">
-          <h2>ISP</h2>
-          <span id="isp">Google LIC</span>
+          <h2 class="result_title">ISP</h2>
+          <span class="result_value" id="isp">Google LIC</span>
         </div>
       </div>
     </div>
@@ -64,7 +71,7 @@
     <div class="map_div" id="ipMap"></div>
 
     <script>
-      const map = L.map("ipMap").setView([27.7172, 85.324], 13);
+      const map = L.map("ipMap").setView([27.7172, 85.324], 16);
 
       const attribution =
         '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors';
