@@ -25,7 +25,7 @@
     ></script>
 
     <!-- Custom Style -->
-    <link rel="stylesheet" href="./styles.css" />
+    <link rel="stylesheet" href="/css/styles.css" />
   </head>
   <body>
     <div class="ip_address_main_div">
@@ -51,7 +51,7 @@
       <div class="ip_address_result_div">
         <div class="result_div ip_address_div">
           <h2 class="result_title">IP Address</h2>
-          <span class="result_value" id="ip_address">8.8.8.8</span>
+          <span class="result_value" id="current_ip_address">8.8.8.8</span>
         </div>
         <div class="result_div location_div">
           <h2 class="result_title">Location</h2>
@@ -70,7 +70,7 @@
 
     <div class="map_div" id="ipMap"></div>
 
-    <script>
+    <!-- <script>
       const map = L.map("ipMap").setView([27.7172, 85.324], 16);
 
       const attribution =
@@ -79,6 +79,7 @@
       const tileUrl = "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png";
       const tiles = L.tileLayer(tileUrl, { attribution });
       tiles.addTo(map);
-    </script>
+    </script> -->
+    <script src="/js/index.js"></script>
   </body>
 </html>
