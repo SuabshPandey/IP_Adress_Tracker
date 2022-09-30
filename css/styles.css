@@ -55,7 +55,7 @@
 }
 
 .result_title {
-  font-size: 14px;
+  font-size: 12px;
   font-weight: 700;
   color: #000;
   margin-bottom: 10px;
@@ -63,7 +63,7 @@
 }
 
 .result_value {
-  font-size: 22px;
+  font-size: 18px;
   font-weight: 700;
   color: #000;
   margin-bottom: 10px;
@@ -140,7 +140,7 @@
     padding-bottom: 30px;
   }
   .result_value {
-    font-size: 18px;
+    font-size: 16px;
     text-align: left;
     align-items: center !important;
   }
