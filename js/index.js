@@ -31,6 +31,14 @@ const headers_option = {
 
 const map = L.map("ipMap").setView([27.7172, 85.324], 16);
 
+var myIcon = L.icon({
+  iconUrl: "images/icon-location.svg",
+  iconSize: [50, 75],
+  iconAnchor: [24, 70],
+});
+
+// const marker = L.marker([27.7172, 85.324], { icon: myIcon }).addTo(map);
+
 const attribution =
   '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors';
 
@@ -44,7 +52,7 @@ console.log("Informations are", ip_address, ip_location, ip_timezone, ip_isp);
 
 updateMarker = (update_marker = [27.7172, 85.324]) => {
   map.setView(update_marker, 13);
-  L.marker(update_marker).addTo(map);
+  L.marker(update_marker, { icon: myIcon }).addTo(map);
 };
 
 // Fetching Data from API
@@ -76,7 +84,7 @@ const getIpDetails = async (default_ip) => {
     updateMarker([dataResponse?.location?.lat, dataResponse?.location?.lng]);
   } catch (error) {
     alert(
-      "Unable to get IP details. \n Make sure you have requested the access of cors-anywhere.herokuapp.com from \n \t https://cors-anywhere.herokuapp.com/corsdemo"
+      `Unable to get IP details. ${error} \n Make sure you have requested the access of cors-anywhere.herokuapp.com from \n \t https://cors-anywhere.herokuapp.com/corsdemo`
     );
     console.log("Error is", error);
   }
